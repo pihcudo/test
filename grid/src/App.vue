@@ -22,6 +22,8 @@
             :rowData="rowData"
             :columnDefs="colDefs"></ag-grid-vue>
     </div>
+    <ResultCharts style="margin-top: 2rem;"/>
+    
 </div>
 </template>
 
@@ -30,6 +32,7 @@ import { ref } from "vue";
 import { AllCommunityModule, ModuleRegistry } from "ag-grid-community";
 import { AgGridVue } from "ag-grid-vue3";
 import mockBilling from "@/mocks/billingMockData.json"
+import ResultCharts from '@/components/ResultCharts.vue'
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 
@@ -37,6 +40,7 @@ export default {
   name: "App",
   components: {
     AgGridVue,
+    ResultCharts,
   },
   setup() {
 
